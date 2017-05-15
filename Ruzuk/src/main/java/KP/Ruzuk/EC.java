@@ -55,14 +55,16 @@ public class EC extends JFrame {
 		l_nazva.setBounds(0, 0, 982, 50);
 		getContentPane().add(l_nazva);
 		l_nazva.setFont(new Font("Serif", Font.ITALIC | Font.BOLD, 30));
-		l_nazva.setForeground(Color.green);
+		l_nazva.setForeground(Color.BLUE);
 
 		JLabel l_komentar = new JLabel("Вам варто пройти опитування");
+		l_komentar.setForeground(Color.WHITE);
 		l_komentar.setHorizontalAlignment(SwingConstants.CENTER);
 		l_komentar.setBounds(0, 49, 982, 14);
 		getContentPane().add(l_komentar);
 
 		JLabel l_komentar1 = new JLabel("Спробуйте якомога точніше давати відповіді на запитання");
+		l_komentar1.setForeground(Color.WHITE);
 		l_komentar1.setHorizontalAlignment(SwingConstants.CENTER);
 		l_komentar1.setBounds(0, 69, 982, 14);
 
@@ -100,41 +102,49 @@ public class EC extends JFrame {
 		getContentPane().add(sl_putanna3);
 
 		JLabel label_3 = new JLabel("точно - так");
+		label_3.setForeground(Color.WHITE);
 		label_3.setHorizontalAlignment(SwingConstants.CENTER);
 		label_3.setBounds(826, 174, 116, 14);
 		getContentPane().add(label_3);
 
 		JLabel label_4 = new JLabel("\u0442\u043E\u0447\u043D\u043E - \u043D\u0456");
+		label_4.setForeground(Color.WHITE);
 		label_4.setHorizontalAlignment(SwingConstants.CENTER);
 		label_4.setBounds(10, 174, 102, 14);
 		getContentPane().add(label_4);
 
 		JLabel label_5 = new JLabel("\u0442\u043E\u0447\u043D\u043E - \u043D\u0456");
+		label_5.setForeground(Color.WHITE);
 		label_5.setHorizontalAlignment(SwingConstants.CENTER);
 		label_5.setBounds(8, 268, 102, 14);
 		getContentPane().add(label_5);
 
 		JLabel label_6 = new JLabel("точно - так");
+		label_6.setForeground(Color.WHITE);
 		label_6.setHorizontalAlignment(SwingConstants.CENTER);
 		label_6.setBounds(824, 268, 116, 14);
 		getContentPane().add(label_6);
 
 		JLabel label_10 = new JLabel("\u0442\u043E\u0447\u043D\u043E - \u043D\u0456");
+		label_10.setForeground(Color.WHITE);
 		label_10.setHorizontalAlignment(SwingConstants.CENTER);
 		label_10.setBounds(10, 371, 102, 14);
 		getContentPane().add(label_10);
 
 		JLabel label_11 = new JLabel("точно - так");
+		label_11.setForeground(Color.WHITE);
 		label_11.setHorizontalAlignment(SwingConstants.CENTER);
 		label_11.setBounds(826, 371, 116, 14);
 		getContentPane().add(label_11);
 
 		JLabel label_15 = new JLabel("\u0442\u043E\u0447\u043D\u043E - \u043D\u0456");
+		label_15.setForeground(Color.WHITE);
 		label_15.setHorizontalAlignment(SwingConstants.CENTER);
 		label_15.setBounds(10, 494, 102, 14);
 		getContentPane().add(label_15);
 
 		JLabel label_16 = new JLabel("точно - так");
+		label_16.setForeground(Color.WHITE);
 		label_16.setHorizontalAlignment(SwingConstants.CENTER);
 		label_16.setBounds(826, 494, 116, 14);
 		getContentPane().add(label_16);
@@ -144,16 +154,16 @@ public class EC extends JFrame {
 		l_putanna0.setHorizontalAlignment(SwingConstants.CENTER);
 		l_putanna0.setBounds(35, 96, 907, 34);
 		l_putanna0.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		l_putanna0.setForeground(Color.RED);
+		l_putanna0.setForeground(Color.YELLOW);
 		getContentPane().add(l_putanna0);
 
 		JLabel l_putanna1 = new JLabel(
-				"В складних обставинах я визнаю за краще почекати, поки пробле¬ми розв’яжуться самі собою.");
+				"В складних обставинах я визнаю за краще почекати, поки проблеми розв’яжуться самі собою.");
 		l_putanna1.setHorizontalAlignment(SwingConstants.CENTER);
 		l_putanna1.setBounds(35, 203, 907, 34);
 		getContentPane().add(l_putanna1);
 		l_putanna1.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		l_putanna1.setForeground(Color.RED);
+		l_putanna1.setForeground(Color.YELLOW);
 
 		JLabel l_putanna2 = new JLabel(
 				"Я можу скільки завгодно підтримувати дружні стосунки з тими, кого я терпіти не можу.");
@@ -161,19 +171,21 @@ public class EC extends JFrame {
 		l_putanna2.setBounds(35, 306, 907, 34);
 		getContentPane().add(l_putanna2);
 		l_putanna2.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		l_putanna2.setForeground(Color.RED);
+		l_putanna2.setForeground(Color.YELLOW);
 
 		JLabel l_putanna3 = new JLabel(
 				"Те, що люди називають долею, приреченням, нічого для мене не значить. Я сам вибираю собі дорогу.");
 		l_putanna3.setHorizontalAlignment(SwingConstants.CENTER);
-		l_putanna3.setBounds(35, 422, 907, 34);
+		l_putanna3.setBounds(10, 422, 960, 34);
 		getContentPane().add(l_putanna3);
 		l_putanna3.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		l_putanna3.setForeground(Color.RED);
+		l_putanna3.setForeground(Color.YELLOW);
 
 		JButton b_vpered0 = new JButton("Далі");
+		b_vpered0.setForeground(Color.BLUE);
+		b_vpered0.setFont(new Font("Segoe Script", Font.BOLD | Font.ITALIC, 25));
 		b_vpered0.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+			public void actionPerformed(ActionEvent arg0) {				
 				new EC1("EC", i_sl_putanna0, i_sl_putanna1, i_sl_putanna2, i_sl_putanna3, ii_sl_putanna4,
 						ii_sl_putanna5, ii_sl_putanna6, ii_sl_putanna7, ii_sl_putanna8, ii_sl_putanna9, ii_sl_putanna10,
 						ii_sl_putanna11, ii_sl_putanna12, ii_sl_putanna13, ii_sl_putanna14, ii_sl_putanna15);
@@ -184,7 +196,7 @@ public class EC extends JFrame {
 		getContentPane().add(b_vpered0);
 
 		JLabel label_20 = new JLabel("");
-		label_20.setIcon(new ImageIcon("res/fon/EC.png"));
+		label_20.setIcon(new ImageIcon("res/fon/EC.jpg"));
 		label_20.setBounds(-1, 0, 983, 562);
 		getContentPane().add(label_20);
 
