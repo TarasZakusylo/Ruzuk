@@ -153,7 +153,7 @@ public class EC3 extends JFrame {
 				i_oderejnist = i_oderejnist * 2 ;
 				i_dovira = (i_dovira * 2) - 20 ;
 				
-					new EC_rezultat(i_ruzuk, i_oderejnist , i_dovira);
+					new EC_4(i_ruzuk, i_oderejnist , i_dovira);
 					setVisible(false);
 				 
 			}
