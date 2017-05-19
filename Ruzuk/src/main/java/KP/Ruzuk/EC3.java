@@ -9,7 +9,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JSlider;
 import javax.swing.SwingConstants;
 import javax.swing.event.ChangeEvent;
@@ -33,9 +32,6 @@ public class EC3 extends JFrame {
 	SliderListener13 slider13 = new SliderListener13();
 	SliderListener14 slider14 = new SliderListener14();
 	SliderListener15 slider15 = new SliderListener15();
-
-	private int i_sl_putanna10 = 3;
-	private int i_sl_putanna11 = 3;
 
 	EC3(String s, final int ii_sl_putanna0, final int ii_sl_putanna1, final int ii_sl_putanna2,
 			final int ii_sl_putanna3, final int ii_sl_putanna4, final int ii_sl_putanna5, final int ii_sl_putanna6,

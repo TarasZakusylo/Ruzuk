@@ -66,91 +66,98 @@ public class EC_4 extends JFrame {
 					d_textField_KilkistVtrat2 = Double.parseDouble(textField_KilkistVtrat2.getText());
 					d_textField_KilkistVtrat3 = Double.parseDouble(textField_KilkistVtrat3.getText());
 					d_textField_KilkistVtrat4 = Double.parseDouble(textField_KilkistVtrat4.getText());
+
+					if (d_Prubutku < 0 || d_Vutratu < 0 || d_ZminniVutratu < 0 || d_ZminaRunky < -999
+							|| d_ZminaRunky > 999 || d_DopystumiVutratu < 0 || d_DopystumiVutratu > 100
+							|| d_textField_KilkistVtrat0 < 0 || d_textField_KilkistVtrat1 < 0
+							|| d_textField_KilkistVtrat2 < 0 || d_textField_KilkistVtrat3 < 0
+							|| d_textField_KilkistVtrat4 < 0) {
+						JOptionPane.showMessageDialog(null, "Неможливе введення, перевірте");
+					} else {
+						if (s_ZminniVutratu.equals("Абсолютне значення")) {
+							d_ZminniVutratu = (d_Prubutku * d_ZminniVutratu) / 100;
+						}
+						double d_MunyliZminiVutratu = (d_Prubutku * d_ZminniVutratu) / 100;
+						double d_ZagalniVutratu = d_MunyliZminiVutratu + d_Vutratu;
+						double d_CustuyPrubutok = d_Prubutku - d_ZagalniVutratu;
+						double d_MaybutnaRealizacia = d_Prubutku - ((d_ZminaRunky * d_Prubutku) / 100);
+						double d_MaybutniZminiVutratu = (d_ZminniVutratu * d_MaybutnaRealizacia) / 100;
+						double d_MaybutniZagalnaVutratu = d_MaybutniZminiVutratu + d_Vutratu;
+						double d_MaybutniyPrubytok = d_MaybutnaRealizacia - d_MaybutniZagalnaVutratu;
+
+						double d_S0 = d_textField_KilkistVtrat0 * 5;
+						double d_S1 = (d_textField_KilkistVtrat0 + d_textField_KilkistVtrat1) * 10;
+						double d_S2 = (d_textField_KilkistVtrat1 + d_textField_KilkistVtrat2) * 10;
+						double d_S3 = (d_textField_KilkistVtrat2 + d_textField_KilkistVtrat3) * 10;
+						double d_S4 = (d_textField_KilkistVtrat3 + d_textField_KilkistVtrat4) * 10;
+						double d_S5 = d_textField_KilkistVtrat4 * 5;
+
+						double d_S_Zagalno = d_S0 + d_S1 + d_S2 + d_S3 + d_S4 + d_S5;
+						double d_S_2 = 0;
+
+						if (d_DopystumiVutratu == 0) {
+							d_S_2 = d_S_Zagalno;
+						}
+						if (d_DopystumiVutratu > 0 && d_DopystumiVutratu < 10) {
+							d_S_2 = d_S_Zagalno
+									- ((((d_DopystumiVutratu * d_textField_KilkistVtrat0) / 10) * d_DopystumiVutratu)
+											/ 2);
+						}
+						if (d_DopystumiVutratu == 10) {
+							d_S_2 = d_S_Zagalno - d_S0;
+						}
+						if (d_DopystumiVutratu > 10 && d_DopystumiVutratu < 30) {
+							d_S_2 = (((((d_DopystumiVutratu * (d_textField_KilkistVtrat1 - d_textField_KilkistVtrat0))
+									/ 20) + d_textField_KilkistVtrat0) + d_textField_KilkistVtrat1)
+									/ (30 - d_DopystumiVutratu)) + d_S2 + d_S3 + d_S4 + d_S5;
+						}
+						if (d_DopystumiVutratu == 30) {
+							d_S_2 = d_S_Zagalno - d_S0 - d_S1;
+						}
+						if (d_DopystumiVutratu > 30 && d_DopystumiVutratu < 50) {
+							d_S_2 = (((((d_DopystumiVutratu * (d_textField_KilkistVtrat2 - d_textField_KilkistVtrat1))
+									/ 20) + d_textField_KilkistVtrat1) + d_textField_KilkistVtrat2)
+									/ (50 - d_DopystumiVutratu)) + d_S3 + d_S4 + d_S5;
+						}
+						if (d_DopystumiVutratu == 50) {
+							d_S_2 = d_S3 + d_S4 + d_S5;
+						}
+						if (d_DopystumiVutratu > 50 && d_DopystumiVutratu < 70) {
+							d_S_2 = (((((d_DopystumiVutratu * (d_textField_KilkistVtrat3 - d_textField_KilkistVtrat2))
+									/ 20) + d_textField_KilkistVtrat2) + d_textField_KilkistVtrat3)
+									/ (70 - d_DopystumiVutratu)) + d_S4 + d_S5;
+						}
+						if (d_DopystumiVutratu == 70) {
+							d_S_2 = d_S4 + d_S5;
+						}
+						if (d_DopystumiVutratu > 70 && d_DopystumiVutratu < 90) {
+							d_S_2 = (((((d_DopystumiVutratu * (d_textField_KilkistVtrat4 - d_textField_KilkistVtrat3))
+									/ 20) + d_textField_KilkistVtrat3) + d_textField_KilkistVtrat4)
+									/ (90 - d_DopystumiVutratu)) + d_S5;
+						}
+						if (d_DopystumiVutratu == 90) {
+							d_S_2 = d_S5;
+						}
+						if (d_DopystumiVutratu > 90 && d_DopystumiVutratu < 100) {
+							d_S_2 = ((((100 - d_DopystumiVutratu) * d_textField_KilkistVtrat4) / 100)
+									* (100 - d_DopystumiVutratu)) / 2;
+						}
+						if (d_DopystumiVutratu == 100) {
+							d_S_2 = 0;
+						}
+
+						double d_Ruzuk = (d_S_2 / (d_S_Zagalno + d_S_2)) * 120;
+						System.out.println("d_S_Zagalno " + d_S_Zagalno);
+						System.out.println("d_S_2 " + d_S_2);
+						System.out.println("d_Ruzuk " + d_Ruzuk);
+
+						new EC_Rezultatu(i_ruzuk, i_oderejnist, i_dovira, d_CustuyPrubutok, d_MaybutniyPrubytok,
+								d_Ruzuk);
+						setVisible(false);
+					}
 				} catch (Exception e1) {
 					JOptionPane.showMessageDialog(null, "Помилкове введення, перевірте");
 				}
-
-				if (d_Prubutku < 0 || d_Vutratu < 0 || d_ZminniVutratu < 0 || d_ZminaRunky < -999 || d_ZminaRunky > 999
-						|| d_DopystumiVutratu < 0 || d_DopystumiVutratu > 100 || d_textField_KilkistVtrat0 < 0
-						|| d_textField_KilkistVtrat1 < 0 || d_textField_KilkistVtrat2 < 0
-						|| d_textField_KilkistVtrat3 < 0 || d_textField_KilkistVtrat4 < 0) {
-					JOptionPane.showMessageDialog(null, "Неможливе введення, перевірте");
-				} else {
-					if (s_ZminniVutratu.equals("Абсолютне значення")) {
-						d_ZminniVutratu = (d_Prubutku * d_ZminniVutratu) / 100;
-					}
-					double d_MunyliZminiVutratu = (d_Prubutku * d_ZminniVutratu) / 100;
-					double d_ZagalniVutratu = d_MunyliZminiVutratu + d_Vutratu;
-					double d_CustuyPrubutok = d_Prubutku - d_ZagalniVutratu;
-					double d_MaybutnaRealizacia = d_Prubutku - ((d_ZminaRunky * d_Prubutku) / 100);
-					double d_MaybutniZminiVutratu = (d_ZminniVutratu * d_MaybutnaRealizacia) / 100;
-					double d_MaybutniZagalnaVutratu = d_MaybutniZminiVutratu + d_Vutratu;
-					double d_MaybutniyPrubytok = d_MaybutnaRealizacia - d_MaybutniZagalnaVutratu;
-
-					double d_S0 = d_textField_KilkistVtrat0 * 5;
-					double d_S1 = (d_textField_KilkistVtrat0 + d_textField_KilkistVtrat1) * 10;
-					double d_S2 = (d_textField_KilkistVtrat1 + d_textField_KilkistVtrat2) * 10;
-					double d_S3 = (d_textField_KilkistVtrat2 + d_textField_KilkistVtrat3) * 10;
-					double d_S4 = (d_textField_KilkistVtrat3 + d_textField_KilkistVtrat4) * 10;
-					double d_S5 = d_textField_KilkistVtrat4 * 5;
-
-					double d_S_Zagalno = d_S0 + d_S1 + d_S2 + d_S3 + d_S4 + d_S5;
-					double d_S_2 = 0;
-
-					if (d_DopystumiVutratu == 0) {
-						d_S_2 = d_S_Zagalno;
-					}
-					if (d_DopystumiVutratu > 0 && d_DopystumiVutratu < 10) {
-						d_S_2 = d_S_Zagalno - ((((d_DopystumiVutratu * d_textField_KilkistVtrat0) / 10) * d_DopystumiVutratu) / 2);
-					}
-					if (d_DopystumiVutratu == 10) {
-						d_S_2 = d_S_Zagalno - d_S0;
-					}
-					if (d_DopystumiVutratu > 10 && d_DopystumiVutratu < 30) {
-						d_S_2 = (((((d_DopystumiVutratu * (d_textField_KilkistVtrat1 - d_textField_KilkistVtrat0)) / 20)
-								+ d_textField_KilkistVtrat0) + d_textField_KilkistVtrat1) / (30 - d_DopystumiVutratu))
-								+ d_S2 + d_S3 + d_S4 + d_S5;
-					}
-					if (d_DopystumiVutratu == 30) {
-						d_S_2 = d_S_Zagalno - d_S0 - d_S1;
-					}
-					if (d_DopystumiVutratu > 30 && d_DopystumiVutratu < 50) {
-						d_S_2 = (((((d_DopystumiVutratu * (d_textField_KilkistVtrat2 - d_textField_KilkistVtrat1)) / 20)
-								+ d_textField_KilkistVtrat1) + d_textField_KilkistVtrat2) / (50 - d_DopystumiVutratu))
-								+ d_S3 + d_S4 + d_S5;
-					}
-					if (d_DopystumiVutratu == 50) {
-						d_S_2 = d_S3 + d_S4 + d_S5;
-					}
-					if (d_DopystumiVutratu > 50 && d_DopystumiVutratu < 70) {
-						d_S_2 = (((((d_DopystumiVutratu * (d_textField_KilkistVtrat3 - d_textField_KilkistVtrat2)) / 20)
-								+ d_textField_KilkistVtrat2) + d_textField_KilkistVtrat3) / (70 - d_DopystumiVutratu))
-								+ d_S4 + d_S5;
-					}
-					if (d_DopystumiVutratu == 70) {
-						d_S_2 = d_S4 + d_S5;
-					}
-					if (d_DopystumiVutratu > 70 && d_DopystumiVutratu < 90) {
-						d_S_2 = (((((d_DopystumiVutratu * (d_textField_KilkistVtrat4 - d_textField_KilkistVtrat3)) / 20)
-								+ d_textField_KilkistVtrat3) + d_textField_KilkistVtrat4) / (90 - d_DopystumiVutratu))
-								+ d_S5;
-					}
-					if (d_DopystumiVutratu == 90) {
-						d_S_2 = d_S5;
-					}
-					if (d_DopystumiVutratu > 90 && d_DopystumiVutratu < 100) {
-						d_S_2 = (((( 100 - d_DopystumiVutratu ) * d_textField_KilkistVtrat4 ) / 100) * ( 100 - d_DopystumiVutratu )) / 2;
-					}
-					if (d_DopystumiVutratu == 100) {
-						d_S_2 = 0;
-					}
-					
-					double d_Ruzuk = (d_S_2 /(d_S_Zagalno+d_S_2))*100;
-					
- 					 new EC_Rezultatu(i_ruzuk, i_oderejnist, i_dovira, d_CustuyPrubutok, d_MaybutniyPrubytok, d_Ruzuk);
-					 setVisible(false);
-				}
-
 			}
 		});
 		b_Dali.setBounds(12, 493, 458, 46);
@@ -182,8 +189,8 @@ public class EC_4 extends JFrame {
 		choice_ZminniVutratu = new Choice();
 		choice_ZminniVutratu.setBounds(175, 163, 147, 22);
 		getContentPane().add(choice_ZminniVutratu);
-		choice_ZminniVutratu.add("Абсолютне значення");
 		choice_ZminniVutratu.add("Відносне значення");
+		choice_ZminniVutratu.add("Абсолютне значення");
 
 		JLabel l_Vutratu = new JLabel("Витрати");
 		l_Vutratu.setForeground(Color.YELLOW);

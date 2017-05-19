@@ -128,7 +128,7 @@ public class EC2 extends JFrame {
 		l_putanna2.setForeground(Color.YELLOW);
 
 		JLabel l_putanna3 = new JLabel(
-				"В своїй роботі я застосовую метод превентивного (тобто попере-джувального) ослаблення обмежень.");
+				"В своїй роботі я застосовую метод превентивного (тобто попереджувального) ослаблення обмежень.");
 		l_putanna3.setHorizontalAlignment(SwingConstants.CENTER);
 		l_putanna3.setBounds(10, 422, 960, 34);
 		getContentPane().add(l_putanna3);
