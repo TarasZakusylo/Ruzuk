@@ -147,9 +147,10 @@ public class EC_4 extends JFrame {
 						}
 
 						double d_Ruzuk = (d_S_2 / (d_S_Zagalno + d_S_2)) * 120;
-						System.out.println("d_S_Zagalno " + d_S_Zagalno);
-						System.out.println("d_S_2 " + d_S_2);
-						System.out.println("d_Ruzuk " + d_Ruzuk);
+						
+//						System.out.println("d_S_Zagalno " + d_S_Zagalno);
+//						System.out.println("d_S_2 " + d_S_2);
+//						System.out.println("d_Ruzuk " + d_Ruzuk);
 
 						new EC_Rezultatu(i_ruzuk, i_oderejnist, i_dovira, d_CustuyPrubutok, d_MaybutniyPrubytok,
 								d_Ruzuk);

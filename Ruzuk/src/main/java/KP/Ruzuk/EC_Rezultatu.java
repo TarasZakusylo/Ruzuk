@@ -31,7 +31,7 @@ public class EC_Rezultatu extends JFrame {
 
 		JLabel lblNewLabel = new JLabel("Ваш чистий");
 		lblNewLabel.setForeground(Color.YELLOW);
-		lblNewLabel.setFont(new Font("Segoe Script", Font.BOLD, 30));
+		lblNewLabel.setFont(new Font("Segoe Script", Font.BOLD, 25));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(612, 25, 370, 43);
 		getContentPane().add(lblNewLabel);
@@ -39,14 +39,14 @@ public class EC_Rezultatu extends JFrame {
 		JLabel label = new JLabel("прибуток: " + d_CustuyPrubutok);
 		label.setForeground(Color.YELLOW);
 		label.setHorizontalAlignment(SwingConstants.CENTER);
-		label.setFont(new Font("Segoe Script", Font.BOLD, 30));
+		label.setFont(new Font("Segoe Script", Font.BOLD, 25));
 		label.setBounds(612, 81, 370, 46);
 		getContentPane().add(label);
 
 		JLabel label_1 = new JLabel("Прогнозований");
 		label_1.setForeground(Color.YELLOW);
 		label_1.setHorizontalAlignment(SwingConstants.CENTER);
-		label_1.setFont(new Font("Segoe Script", Font.BOLD, 30));
+		label_1.setFont(new Font("Segoe Script", Font.BOLD, 25));
 		label_1.setBounds(641, 169, 341, 43);
 		getContentPane().add(label_1);
 		
@@ -143,7 +143,7 @@ public class EC_Rezultatu extends JFrame {
 		JLabel label_3 = new JLabel("прибуток:" + d_MaybutniyPrubytok);
 		label_3.setHorizontalAlignment(SwingConstants.CENTER);
 		label_3.setForeground(Color.YELLOW);
-		label_3.setFont(new Font("Segoe Script", Font.BOLD, 30));
+		label_3.setFont(new Font("Segoe Script", Font.BOLD, 25));
 		label_3.setBounds(641, 215, 341, 43);
 		getContentPane().add(label_3);
 		
