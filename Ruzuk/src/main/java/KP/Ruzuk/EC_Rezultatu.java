@@ -149,7 +149,7 @@ public class EC_Rezultatu extends JFrame {
 		
 
 		l_fon = new JLabel("");
-		l_fon.setIcon(new ImageIcon("C:\\Users\\Zakkk\\Desktop\\fon_EC_rezultatu.jpg"));
+		l_fon.setIcon(new ImageIcon("res/fon/fon_EC_rezultatu.jpg"));
 		l_fon.setBounds(-1, 0, 995, 572);
 		getContentPane().add(l_fon);
 
